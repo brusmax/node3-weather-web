@@ -23,21 +23,21 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
-        name: 'Kike'
+        name: 'brusmax'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
         title: "Help Page",
-        name: 'Kike'
+        name: 'brusmax'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'Hola About',
-        name: 'Kike'
+        name: 'brusmax'
     })
 })
 
@@ -91,14 +91,14 @@ app.get('/help/*', (req, res) => {
     res.render('404', {
         title: 'Not found',
         error: 'this was not found',
-        name: 'kike'
+        name: 'brusmax'
     })
 })
 
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Kike',
+        name: 'brusmax',
         error: "Page not found"
     })
 })

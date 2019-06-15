@@ -10,8 +10,8 @@ const forecast = function(lat, long, callback){
             callback('Please check data geolocation is a valid one and try again', undefined)
         }else{
             callback(undefined, {
-                data: body.currently,
-                text: body.daily.data[0].summary+' It is currently '+body.temperature+' defrees out. There is a '+body.daily.data[0].precipProbability+'% chance of rain.'
+                summary: body.daily.data[0].summary+' It is currently '+body.currently.temperature+' degrees out. There is a '+body.daily.data[0].precipProbability * 100+'% chance of rain.',
+                currently: body.currently
             })
         }
     })

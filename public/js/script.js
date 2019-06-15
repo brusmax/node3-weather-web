@@ -12,8 +12,8 @@ weatherForm.addEventListener('submit', (e) => {
             if(data.error){
                 return messageOne.textContent = data.error
             }
-            console.log(data)
-            messageOne.textContent = data.forecast.text
+            const forecast = data.forecast.currently
+            messageOne.innerHTML = '<b>Summary</b>: ' + forecast.summary + '<br><b>Probability rain:</b>  ' + forecast.precipProbability + '<br><b>Temperature:</b>  ' + forecast.temperature + '<br><b>Humidity:</b>  ' + (forecast.humidity * 100) + '%' + '<br><b>Wind Gust:</b>  ' + forecast.windGust + 'Km/h'
         })
     })
 } )
